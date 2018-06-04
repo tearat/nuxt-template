@@ -31,17 +31,20 @@
 
 
 <style scoped lang="less">
+    
     #page {
         nav {
             margin-left: 20px;
+            margin-right: 20px;
         }
         .router-link {
-            display: inline-block;
+            display: block;
             padding: 10px;
-            background-color: #222;
+            background-color: rgba(255,255,255,0.1);
+            transition: 0.25s ease;
             color: white;
             &:hover {
-                background-color: #777;
+                background-color: rgba(255,255,255,0.25);
             }
         }
     }

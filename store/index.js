@@ -9,15 +9,15 @@ const store = () => new Vuex.Store({
         stars: 0
     },
     mutations: {
-        increment(state) {
+        stars_increment(state) {
             state.stars++
         },
-        decrement(state) {
+        stars_decrement(state) {
             state.stars--
         },
-        setStars(state, stars) {
+        stars_set(state, stars) {
             state.stars = stars
-        }
+        },
     }
 })
 

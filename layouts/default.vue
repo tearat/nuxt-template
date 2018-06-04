@@ -1,27 +1,42 @@
 <template>
   <div>
     <navigator/>
+    <div id="page">
+        <router-link to="/">
+            <img src="~/assets/logo.png" class="logo">
+        </router-link>
+    </div>
     <nuxt/>
   </div>
 </template>
 
 <script>
+    
     import Navigator from '~/components/Navigator.vue'
     import Style from '~/assets/Style.less'
+    
     import stars from '~/assets/stars.json'
+    
+    import cookie from '~/plugins/cookie/cookie.js'
+    import set_scheme from '~/plugins/set_scheme/set_scheme.js'
 
     export default {
         components: {
             Navigator
         },
-        created() {
-            this.$store.commit('setStars', stars.stars);
+        mounted() {
+            this.$store.commit('stars_set', stars.stars);
+            set_scheme.set(this);
         }
     }
 
 </script>
 
-<style>
+<style lang="less">
+    body {
+/*        background-image: url(~/assets/bg.jpg);*/
+    }
+    
     html {
         font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         font-size: 16px;
@@ -38,6 +53,14 @@
     *:after {
         box-sizing: border-box;
         margin: 0;
+    }
+    
+    #page {
+        text-align: center;
+        .logo {
+            width: 120px;
+            padding-top: 40px;
+        }
     }
 
 </style>
