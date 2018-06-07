@@ -2,7 +2,7 @@
     <div id="page">
         <h1>Index page</h1>
         <p>Stars: {{ $store.state.stars }}</p>
-        <p>Color scheme: {{ color_scheme }}</p>
+        <p>Color scheme: {{ color_scheme ? color_scheme : 'not defined' }}</p>
     </div>
 </template>
 

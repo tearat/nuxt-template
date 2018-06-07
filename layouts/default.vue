@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div id="root" v-bind:class="color_scheme ? color_scheme : 'default'">
     <navigator/>
     <div id="page">
         <router-link to="/">
             <img src="~/assets/logo.png" class="logo">
         </router-link>
     </div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 
@@ -18,24 +18,31 @@
     import stars from '~/assets/stars.json'
     
     import cookie from '~/plugins/cookie/cookie.js'
-    import set_scheme from '~/plugins/set_scheme/set_scheme.js'
 
     export default {
+        data() {
+            return {
+                color_scheme: ""
+            }
+        },
         components: {
             Navigator
         },
         mounted() {
             this.$store.commit('stars_set', stars.stars);
-            set_scheme.set(this);
+            this.color_scheme = this.$cookie.get('color_scheme');
+        },
+        watch: {
+            "$route" () {
+                this.$store.commit('stars_set', stars.stars);
+                this.color_scheme = this.$cookie.get('color_scheme');
+            }
         }
     }
 
 </script>
 
 <style lang="less">
-    body {
-/*        background-image: url(~/assets/bg.jpg);*/
-    }
     
     html {
         font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

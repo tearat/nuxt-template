@@ -1,4 +1,7 @@
 export default ({
+    load() {
+        return [ 'cold night', 'rainy morning', 'evergreen' ];
+    },
     set(context) {
         var color_scheme = context.$cookie.get('color_scheme');
         if ( color_scheme == 'dark' ) {

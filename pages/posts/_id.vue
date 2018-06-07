@@ -11,7 +11,8 @@
 
 
 <script>
-    import posts from '~/assets/posts.json'
+    
+    import posts from "~/assets/posts.json";
 
     export default {
         data() {
@@ -27,7 +28,7 @@
                     this.title = posts[this.id - 1].title;
                     this.text = posts[this.id - 1].text;
                 } else {
-                    this.$router.replace('/404');
+                    this.$router.replace("/404");
                 }
             }
         },
@@ -36,7 +37,7 @@
             this.getPost(this.id)
         },
         watch: {
-            '$route' () { // Этот скрипт следит за обновлением URL
+            "$route" () { // Этот скрипт следит за обновлением URL
                 this.id = this.$route.params.id;
                 this.getPost(this.id)
             }

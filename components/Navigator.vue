@@ -24,14 +24,16 @@
 
 <style lang="less" scoped>
     #navigator {
+        width: 800px;
+        margin: 0 auto;
+/*        background-color: #111;*/
         nav {
-            background-color: #111;
             text-align: center;
             height: 26px;
             .router-link {
                 padding: 5px 30px;
-                background-color: #555;
-                color: white;
+/*                background-color: #555;*/
+/*                color: white;*/
                 &:hover {
                     background-color: #777;
                 }

@@ -1,16 +1,80 @@
 body {
-    background-color: #050505;
+}
+
+#root {
+    background-color: grey;
+    min-height: 100vw;
+    
+    &.default {
+        background-color: #111;
+        color: #eee;
+        #navigator {
+            background-color: #222;
+            .router-link {
+                color: #eee;
+                background-color: #333;
+                &:hover {
+                    background-color: #555;
+                }
+            }
+        }
+        #page {
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+    
+    &.cold_night {
+        background-color: #112;
+        color: #ddf;
+        #navigator {
+            background-color: #334;
+            .router-link {
+                color: #ddf;
+                background-color: #556;
+                &:hover {
+                    background-color: #667;
+                }
+            }
+        }
+        #page {
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+    
+    &.rainy_morning {
+        background-color: #fdc;
+        color: #711;
+        #navigator {
+            background-color: firebrick;
+            .router-link {
+                color: #fee;
+                background-color: firebrick;
+                &:hover {
+                    background-color: orange;
+                }
+            }
+        }
+        #page {
+            background-color: rgba(255,0,0,0.2);
+            select {
+                color: #711;
+            }
+        }
+    }
+    
+    &.evergreen {
+        background-color: #111;
+    }
 }
 
 #page {
     width: 800px;
     margin: 0 auto;
     padding-bottom: 25px;
-//    padding-top: 100px;
-    background-color: rgba(0,0,0,0.8);
-    color: #eee;
-//    border-bottom-left-radius: 20px;
-//    border-bottom-right-radius: 20px;
+    &:last-child {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
     
     h1,h2,p {
         padding-left: 20px;

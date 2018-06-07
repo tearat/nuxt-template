@@ -10,7 +10,7 @@
             </div>
             <h2>Color scheme:</h2>
             <select v-model="color_scheme" @change="save">
-                <option value="dark">dark</option>
+                <option v-for="scheme in schemes" :value="scheme" :key="scheme">{{scheme | space}}</option>
                 <option value="light">light</option>
             </select>
         </div>
@@ -20,18 +20,22 @@
 
 <script>
     
-    import set_scheme from '~/plugins/set_scheme/set_scheme.js'
-    
     export default {
         data() {
             return {
+                schemes: [ 'cold_night', 'rainy_morning', 'evergreen' ],
                 color_scheme: ''
+            }
+        },
+        filters: {
+            space(value) {
+                return value.replace("_", " ");
             }
         },
         methods: {
             save() {
                 this.$cookie.set('color_scheme', this.color_scheme, 1);
-                set_scheme.set(this);
+                this.$router.push("/redirect");
             }
         },
         mounted() {
