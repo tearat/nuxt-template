@@ -12,7 +12,7 @@
 
 <script>
     
-    import posts from "~/assets/posts.json";
+    import posts from "~/assets/data/posts.json";
 
     export default {
         data() {

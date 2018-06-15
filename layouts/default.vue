@@ -3,7 +3,7 @@
     <navigator/>
     <div id="page">
         <router-link to="/">
-            <img src="~/assets/logo.png" class="logo">
+            <img src="~/assets/img/logo.png" class="logo">
         </router-link>
     </div>
     <nuxt />
@@ -12,12 +12,15 @@
 
 <script>
     
+    import Vue from 'vue'
+    import VueCookie from 'vue-cookie'
+    Vue.use(VueCookie);
+    
     import Navigator from '~/components/Navigator.vue'
-    import Style from '~/assets/Style.less'
+    import style from '~/assets/style/Style.less'
     
-    import stars from '~/assets/stars.json'
+    import stars from '~/assets/data/stars.json'
     
-    import cookie from '~/plugins/cookie/cookie.js'
 
     export default {
         data() {
@@ -34,7 +37,6 @@
         },
         watch: {
             "$route" () {
-                this.$store.commit('stars_set', stars.stars);
                 this.color_scheme = this.$cookie.get('color_scheme');
             }
         }

@@ -2,13 +2,13 @@
     <div id="navigator">
         <nav>
             <router-link class="router-link" to="/">index</router-link>
-            <router-link class="router-link" v-for="link in links" :to="link" :key="link">{{link}}</router-link>
+            <router-link class="router-link" v-for="link in links" :to="'/'+link" :key="link">{{link}}</router-link>
         </nav>
     </div>
 </template>
 
-
 <script>
+    
     export default {
         data() {
             return {
@@ -20,7 +20,6 @@
     }
 
 </script>
-
 
 <style lang="less" scoped>
     #navigator {

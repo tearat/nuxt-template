@@ -11,7 +11,6 @@
             <h2>Color scheme:</h2>
             <select v-model="color_scheme" @change="save">
                 <option v-for="scheme in schemes" :value="scheme" :key="scheme">{{scheme | space}}</option>
-                <option value="light">light</option>
             </select>
         </div>
     </div>
@@ -50,7 +49,6 @@
     #page {
         .buttons {
             display: inline-block;
-            /*        width: 160px;*/
             font-size: 20px;
             border: 1px solid grey;
             border-radius: 5px;

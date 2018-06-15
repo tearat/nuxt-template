@@ -4,6 +4,7 @@ body {
 #root {
     background-color: grey;
     min-height: 100vw;
+    background-size: 100%;
     
     &.default {
         background-color: #111;
@@ -24,7 +25,7 @@ body {
     }
     
     &.cold_night {
-        background-color: #112;
+        background-image: url("~/assets/img/snow.jpg");
         color: #ddf;
         #navigator {
             background-color: #334;
@@ -37,13 +38,13 @@ body {
             }
         }
         #page {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(0,0,0,0.8);
         }
     }
     
     &.rainy_morning {
-        background-color: #fdc;
-        color: #711;
+        background-image: url("~/assets/img/rainy.jpg");
+        color: #fcc;
         #navigator {
             background-color: firebrick;
             .router-link {
@@ -55,15 +56,32 @@ body {
             }
         }
         #page {
-            background-color: rgba(255,0,0,0.2);
+            background-color: rgba(100,50,50,0.8);
             select {
-                color: #711;
+                color: #fcc;
             }
         }
     }
     
     &.evergreen {
-        background-color: #111;
+        background-image: url("~/assets/img/evergreen.jpg");
+        color: #dfd;
+        #navigator {
+            background-color: darkgreen;
+            .router-link {
+                color: #efe;
+                background-color: darkgreen;
+                &:hover {
+                    background-color: darkseagreen;
+                }
+            }
+        }
+        #page {
+            background-color: rgba(0,50,0,0.6);
+            select {
+                color: #dfd;
+            }
+        }
     }
 }
 
