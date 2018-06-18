@@ -1,8 +1,8 @@
 <template>
     <div id="navigator">
         <nav>
-            <router-link class="router-link" to="/">index</router-link>
-            <router-link class="router-link" v-for="link in links" :to="'/'+link" :key="link">{{link}}</router-link>
+            <nuxt-link class="router-link" to="/">index</nuxt-link>
+            <nuxt-link class="router-link" v-for="link in links" :to="'/'+link" :key="link">{{link}}</nuxt-link>
         </nav>
     </div>
 </template>

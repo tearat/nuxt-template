@@ -2,9 +2,9 @@
   <div id="root" v-bind:class="color_scheme ? color_scheme : 'default'">
     <navigator/>
     <div id="page">
-        <router-link to="/">
+        <nuxt-link to="/">
             <img src="~/assets/img/logo.png" class="logo">
-        </router-link>
+        </nuxt-link>
     </div>
     <nuxt />
   </div>
