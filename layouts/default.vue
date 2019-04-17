@@ -14,7 +14,10 @@
     
     import Vue from 'vue'
     import VueCookie from 'vue-cookie'
+//    import VueDraggable from 'vue-draggable'
+    
     Vue.use(VueCookie);
+//    Vue.use(VueDraggable)
     
     import Navigator from '~/components/Navigator.vue'
     import style from '~/assets/style/Style.less'

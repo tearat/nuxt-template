@@ -34,7 +34,7 @@
         methods: {
             save() {
                 this.$cookie.set('color_scheme', this.color_scheme, 1);
-                this.$router.push("/redirect");
+                this.$router.go();
             }
         },
         mounted() {

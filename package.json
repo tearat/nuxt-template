@@ -15,7 +15,9 @@
     "dependencies": {
         "axios": "^0.18.0",
         "nuxt": "^1.0.0",
-        "vue-cookie": "^1.1.4"
+        "vue-cookie": "^1.1.4",
+        "vue-draggable": "^2.0.0",
+        "vuedraggable": "^2.20.0"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.1",
@@ -34,5 +36,9 @@
             "host": "localhost",
             "port": "8000"
         }
+    },
+    "engines": {
+        "node": "10.3.0",
+        "npm": "6.1.0"
     }
 }

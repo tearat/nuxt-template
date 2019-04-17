@@ -12,7 +12,7 @@
     export default {
         data() {
             return {
-                links: [ 'controls', 'posts' ]
+                links: [ 'controls', 'drag', 'posts' ]
             }
         },
         created() {
