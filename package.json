@@ -14,7 +14,7 @@
         "heroku-postbuild": "npm run build"
     },
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "nuxt": "^1.0.0",
         "vue-cookie": "^1.1.4",
         "vue-draggable": "^2.0.0",
