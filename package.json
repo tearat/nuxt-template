@@ -15,22 +15,22 @@
     },
     "dependencies": {
         "axios": "^0.18.0",
-        "nuxt": "^1.0.0",
+        "nuxt": "^3.0.0",
         "vue-cookie": "^1.1.4",
         "vue-draggable": "^2.0.0",
         "vuedraggable": "^2.20.0"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.1",
-        "coffee-loader": "^0.9.0",
+        "coffee-loader": "^4.0.0",
         "coffee-script": "^1.12.7",
         "coffeescript": "^2.3.1",
         "eslint": "^4.15.0",
         "eslint-friendly-formatter": "^3.0.0",
-        "eslint-loader": "^1.7.1",
+        "eslint-loader": "^4.0.2",
         "eslint-plugin-vue": "^4.0.0",
         "less": "^3.0.4",
-        "less-loader": "^4.1.0"
+        "less-loader": "^11.1.0"
     },
     "config": {
         "nuxt": {
